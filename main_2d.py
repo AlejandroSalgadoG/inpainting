@@ -1,12 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-L = 50
+L = 200
 n = 50
 T0 = 0
 dx = L / n
 dy = dx
-alpha = 2.0
+alpha = 2.5
 tf = 60
 dt = 0.1
 
@@ -37,7 +37,7 @@ plt.ion()
 for ti in t:
   plt.pcolormesh(T, cmap=plt.cm.jet, vmin=0, vmax=100)
   plt.colorbar()
-  plt.pause(0.00001)
+  plt.pause(0.000001)
   plt.clf()
 
   T += dT_dt() * dt
